@@ -1,1 +1,5 @@
-<p>post-list works!</p>
+<div class="post-list">
+  <ng-container *ngFor="let post of posts">
+    <app-post-item [post]="post"></app-post-item>
+  </ng-container>
+</div>
