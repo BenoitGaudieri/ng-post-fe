@@ -12,8 +12,4 @@ import { CommonModule } from '@angular/common';
 })
 export class PostListComponent {
   @Input() posts: Post[] = [];
-
-  ngOnInit() {
-    console.log('posts working', this.posts);
-  }
 }

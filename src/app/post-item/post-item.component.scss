@@ -1,7 +1,7 @@
 .card {
   width: 100%;
   margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #eeeeee;
 }
 
 .card-body {
@@ -9,11 +9,44 @@
 }
 
 .card-title {
-  margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.card-text {
-  font-size: 16px;
+.card-author {
+  font-size: 14px;
+  color: #666;
+  .card-username {
+    text-decoration: underline;
+    color: #d30000;
+  }
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  font-size: 24px;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+  }
+}
+
+.card-flex {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }

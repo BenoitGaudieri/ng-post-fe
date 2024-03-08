@@ -1,1 +1,9 @@
-<p>post-detail works!</p>
+<div class="post-detail">
+  <h2>Post Details</h2>
+  <p>{{ post.body }}</p>
+  <p>Author name: {{ user.name }}</p>
+  <p>Author username: {{ user.username }}</p>
+  <p>Content: {{ post.body }}</p>
+
+  <button (click)="closeDetail()">Close Details</button>
+</div>
