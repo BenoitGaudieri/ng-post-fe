@@ -1,3 +1,4 @@
-<main>
+<app-navbar (themeToggle)="toggleTheme()" [theme]="theme"></app-navbar>
+<main [class]="theme">
   <router-outlet></router-outlet>
 </main>
