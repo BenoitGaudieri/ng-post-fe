@@ -5,11 +5,12 @@ import { User } from '../../interfaces/user.interface';
 import { DataService } from '../../services/data.service';
 import { CommonModule } from '@angular/common';
 import { CardService } from '../../services/card.service';
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-post-item',
   standalone: true,
-  imports: [CommonModule, PostDetailComponent],
+  imports: [CommonModule, PostDetailComponent, RouterLinkWithHref],
   templateUrl: './post-item.component.html',
   styleUrl: './post-item.component.scss',
 })

@@ -12,7 +12,10 @@
       <div class="card-infos">
         <h5 class="card-title">{{ post.title }}</h5>
         <p class="card-author">
-          Pubblicato da: <span class="card-username">{{ user.username }}</span>
+          Pubblicato da:
+          <a [routerLink]="'/user/' + user.id" class="card-username">{{
+            user.username
+          }}</a>
         </p>
       </div>
     </div>
