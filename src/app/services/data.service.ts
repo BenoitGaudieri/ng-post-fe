@@ -29,4 +29,8 @@ export class DataService {
   getUserById(id: number): User | undefined {
     return this.users.find((user) => user.id === id);
   }
+
+  hasUsers(): boolean {
+    return this.users.length > 0;
+  }
 }
