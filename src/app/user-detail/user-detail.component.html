@@ -1,2 +1,51 @@
-<p>{{ user?.name }}</p>
-<p *ngIf="error">Error: {{ error }}</p>
+<div *ngIf="user" class="container">
+  <h2>User Details</h2>
+  <p>
+    <span class="label">Name:</span> <span class="value">{{ user.name }}</span>
+  </p>
+  <p>
+    <span class="label">Username:</span>
+    <span class="value">{{ user.username }}</span>
+  </p>
+  <p>
+    <span class="label">Email:</span>
+    <span class="value">{{ user.email }}</span>
+  </p>
+  <p>
+    <span class="label">Phone:</span>
+    <span class="value">{{ user.phone }}</span>
+  </p>
+  <p>
+    <span class="label">Website:</span>
+    <span class="value">{{ user.website }}</span>
+  </p>
+  <p>
+    <span class="label">Address:</span>
+    <span class="value"
+      >{{ user.address.street }}, {{ user.address.suite }},
+      {{ user.address.city }}, {{ user.address.zipcode }}</span
+    >
+  </p>
+  <p>
+    <span class="label">Geo:</span>
+    <span class="value"
+      >{{ user.address.geo.lat }}, {{ user.address.geo.lng }}</span
+    >
+  </p>
+  <p>
+    <span class="label">Company:</span>
+    <span class="value">{{ user.company.name }}</span>
+  </p>
+  <p>
+    <span class="label">Catch Phrase:</span>
+    <span class="value">{{ user.company.catchPhrase }}</span>
+  </p>
+  <p>
+    <span class="label">BS:</span>
+    <span class="value">{{ user.company.bs }}</span>
+  </p>
+</div>
+
+<div *ngIf="error">
+  <h2>Error: {{ error }}</h2>
+</div>
