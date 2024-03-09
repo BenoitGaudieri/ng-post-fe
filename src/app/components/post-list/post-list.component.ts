@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Post } from '../interfaces/post.interface';
+import { Post } from '../../interfaces/post.interface';
 import { PostItemComponent } from '../post-item/post-item.component';
 import { CommonModule } from '@angular/common';
 

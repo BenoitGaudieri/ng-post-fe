@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { Post } from '../interfaces/post.interface';
+import { Post } from '../../interfaces/post.interface';
 import { PostDetailComponent } from '../post-detail/post-detail.component';
-import { User } from '../interfaces/user.interface';
-import { DataService } from '../services/data.service';
+import { User } from '../../interfaces/user.interface';
+import { DataService } from '../../services/data.service';
 import { CommonModule } from '@angular/common';
-import { CardService } from '../services/card.service';
+import { CardService } from '../../services/card.service';
 
 @Component({
   selector: 'app-post-item',
