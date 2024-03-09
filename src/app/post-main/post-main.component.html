@@ -1,3 +1,8 @@
 <app-spinner *ngIf="isLoading"></app-spinner>
+<input
+  [(ngModel)]="searchTerm"
+  (input)="filterPosts()"
+  placeholder="Search by username"
+/>
 <app-post-list *ngIf="!isLoading && !error" [posts]="posts"></app-post-list>
 <p *ngIf="error">An error occurred</p>

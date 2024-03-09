@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { SpinnerComponent } from '../shared/spinner/spinner.component';
 import { PostListComponent } from '../components/post-list/post-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-post-main',
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     SpinnerComponent,
     PostListComponent,
+    FormsModule,
   ],
   providers: [DataService],
   templateUrl: './post-main.component.html',
@@ -22,8 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class PostMainComponent {
   posts: Post[] = [];
-  isLoading = true;
-  error = false;
+  isLoading: boolean = true;
+  error: boolean = false;
+  searchTerm: string = '';
 
   constructor(private dataService: DataService) {}
 
@@ -44,5 +47,21 @@ export class PostMainComponent {
         console.error(error);
       },
     });
+  }
+
+  filterPosts() {
+    if (this.searchTerm) {
+      this.posts = this.posts.filter((post) => {
+        const user = this.dataService.getUserById(post.userId);
+        return (
+          user &&
+          user.username.toLowerCase().includes(this.searchTerm.toLowerCase())
+        );
+      });
+    } else {
+      this.dataService.getPosts().subscribe((posts) => {
+        this.posts = posts;
+      });
+    }
   }
 }
