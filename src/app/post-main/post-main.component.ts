@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchBarComponent } from '../components/search-bar/search-bar.component';
 import { SearchService } from '../services/search.service';
 import { ActivatedRoute } from '@angular/router';
-import { ViewToggleComponent } from '../components/view-toggle/view-toggle.component';
+import { ViewToggleComponent } from '../shared/view-toggle/view-toggle.component';
 
 @Component({
   selector: 'app-post-main',
