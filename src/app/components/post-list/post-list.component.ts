@@ -12,4 +12,9 @@ import { CommonModule } from '@angular/common';
 })
 export class PostListComponent {
   @Input() posts: Post[] = [];
+  isGridView: boolean = false;
+
+  toggleView() {
+    this.isGridView = !this.isGridView;
+  }
 }

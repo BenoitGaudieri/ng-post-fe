@@ -10,6 +10,8 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  height: 150px;
 }
 
 .card-title {
@@ -31,6 +33,7 @@
 .avatar {
   height: 50px;
   width: 50px;
+  min-width: 50px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -74,4 +77,13 @@
 .card-infos {
   padding-left: 10px;
   padding-bottom: 20px;
+}
+
+.card-title,
+.card-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits text to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
