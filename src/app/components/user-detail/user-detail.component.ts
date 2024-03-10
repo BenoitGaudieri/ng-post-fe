@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DataService } from '../services/data.service';
-import { User } from '../interfaces/user.interface';
+import { DataService } from '../../services/data.service';
+import { User } from '../../interfaces/user.interface';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 

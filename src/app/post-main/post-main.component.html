@@ -1,4 +1,14 @@
 <app-spinner *ngIf="isLoading"></app-spinner>
-<app-search-bar></app-search-bar>
-<app-post-list *ngIf="!isLoading && !error" [posts]="posts"></app-post-list>
+<div class="header">
+  <app-search-bar></app-search-bar>
+  <app-view-toggle
+    [isGridView]="isGridView"
+    (viewChange)="isGridView = $event"
+  ></app-view-toggle>
+</div>
+<app-post-list
+  *ngIf="!isLoading && !error"
+  [posts]="posts"
+  [isGridView]="isGridView"
+></app-post-list>
 <p *ngIf="error">An error occurred</p>

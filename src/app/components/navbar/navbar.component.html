@@ -1,12 +1,15 @@
-<nav class="navbar">
+<nav
+  class="navbar"
+  [ngClass]="{ dark: theme === 'dark', light: theme === 'light' }"
+>
   <a href="/" class="nav-link">Home</a>
   <button (click)="toggleTheme()" class="theme-toggle">
     <svg
-      *ngIf="theme === 'light'"
+      *ngIf="theme === 'dark'"
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      fill="white"
       viewBox="0 0 24 24"
-      stroke="currentColor"
+      stroke="white"
     >
       <path
         stroke-linecap="round"
@@ -16,7 +19,7 @@
       />
     </svg>
     <svg
-      *ngIf="theme === 'dark'"
+      *ngIf="theme === 'light'"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
       height="800px"

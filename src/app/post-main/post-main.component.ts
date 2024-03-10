@@ -6,9 +6,10 @@ import { CommonModule } from '@angular/common';
 import { SpinnerComponent } from '../shared/spinner/spinner.component';
 import { PostListComponent } from '../components/post-list/post-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { SearchBarComponent } from '../components/search-bar/search-bar.component';
 import { SearchService } from '../services/search.service';
 import { ActivatedRoute } from '@angular/router';
+import { ViewToggleComponent } from '../components/view-toggle/view-toggle.component';
 
 @Component({
   selector: 'app-post-main',
@@ -19,6 +20,7 @@ import { ActivatedRoute } from '@angular/router';
     SpinnerComponent,
     PostListComponent,
     SearchBarComponent,
+    ViewToggleComponent,
   ],
   providers: [DataService],
   templateUrl: './post-main.component.html',
@@ -29,6 +31,7 @@ export class PostMainComponent {
   posts: Post[] = [];
   isLoading: boolean = true;
   error: boolean = false;
+  isGridView: boolean = false;
   private searchTermSubscription: Subscription = new Subscription();
   private routeSubscription: Subscription = new Subscription();
 

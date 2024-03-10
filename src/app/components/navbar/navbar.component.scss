@@ -1,32 +1,60 @@
+@import "../../styles/variables";
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 2rem;
+
+  &.dark {
+    background-color: $background-dark;
+    a {
+      color: #f8f9fa;
+    }
+
+    .nav-link:hover {
+      color: #ddd;
+    }
+  }
+
+  &.light {
+    background-color: $background-light;
+    color: #343a40;
+
+    a {
+      color: #343a40;
+    }
+
+    .nav-link:hover {
+      color: #0056b3;
+    }
+  }
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
   margin-right: 20px;
   text-decoration: none;
-  color: #333;
+  font-weight: 600;
 }
 
-/* navbar.component.scss */
 .theme-toggle {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 8px;
   border: none;
   background: none;
   cursor: pointer;
-  color: inherit;
 
   svg {
     width: 24px;
     height: 24px;
     fill: currentColor;
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
