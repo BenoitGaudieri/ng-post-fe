@@ -2,7 +2,9 @@
   <p class="post-author">
     Post pubblicato da:
     <span class="post-name">{{ user.name }}</span> Alias:
-    <span class="post-username">{{ user.username }}</span>
+    <a [routerLink]="'/user/' + user.id" class="post-username">{{
+      user.username
+    }}</a>
   </p>
   <h3 class="post-title">{{ post.title }}</h3>
   <p class="post-content">
