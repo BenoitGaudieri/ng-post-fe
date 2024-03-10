@@ -3,20 +3,24 @@
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 p {
   font-size: 1em;
-  line-height: 1.5;
-  margin-bottom: 10px;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .label {
-  font-weight: bold;
-  margin-right: 5px;
+  font-weight: 600;
+  margin-right: 10px;
 }
