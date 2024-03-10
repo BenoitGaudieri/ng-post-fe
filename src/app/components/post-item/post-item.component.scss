@@ -1,31 +1,37 @@
 .card {
   width: 100%;
   margin-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .card-body {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .card-author {
   font-size: 14px;
-  color: #666;
-  .card-username {
-    text-decoration: underline;
-    color: #d30000;
-  }
+}
+
+.card-username {
+  text-decoration: none;
+  color: #d30000;
+  font-weight: bold;
 }
 
 .avatar {
   height: 50px;
   width: 50px;
-  border-radius: 10px;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,19 +40,38 @@
   color: #fff;
   margin-right: 10px;
   cursor: pointer;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .avatar {
     height: 40px;
     width: 40px;
     font-size: 20px;
+  }
+  .card-flex {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
 .card-flex {
   display: flex;
   align-items: center;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .card-flex {
     flex-direction: column;
+    align-items: stretch;
   }
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-infos {
+  padding-left: 10px;
+  padding-bottom: 20px;
 }

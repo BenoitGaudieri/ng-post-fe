@@ -1,5 +1,8 @@
-<input
-  [(ngModel)]="searchTerm"
-  (input)="onInput()"
-  placeholder="Search by username"
-/>
+<div class="search-wrapper">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="onInput()"
+    placeholder="Search by username"
+  />
+</div>
