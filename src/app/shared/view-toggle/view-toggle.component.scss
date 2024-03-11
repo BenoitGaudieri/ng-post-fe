@@ -10,6 +10,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.2s;
 
+  @media (max-width: 480px) {
+    display: none;
+  }
+
   &:hover {
     background-color: #efefef;
     transform: translateY(-2px);
