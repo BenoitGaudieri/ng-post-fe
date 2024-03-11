@@ -1,6 +1,15 @@
 <div class="post-list" [ngClass]="{ 'grid-view': isGridView }">
-  <ng-container *ngFor="let post of posts">
+  <ng-container *ngFor="let post of paginatedPosts">
     <app-post-item [post]="post"></app-post-item>
   </ng-container>
   <p *ngIf="posts.length === 0">No posts found.</p>
+</div>
+<div class="pagination-controls">
+  <button (click)="previousPage()" [disabled]="currentPage === 1">
+    Previous
+  </button>
+  <span>Page {{ currentPage }} of {{ numberOfPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === numberOfPages">
+    Next
+  </button>
 </div>

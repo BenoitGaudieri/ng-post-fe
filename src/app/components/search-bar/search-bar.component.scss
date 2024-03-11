@@ -1,23 +1,50 @@
+$border-radius: 8px;
+$box-shadow-default: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-focus: 0 6px 8px rgba(0, 0, 0, 0.15);
+$font-size-default: 18px;
+$padding-default: 16px 24px;
+$transition-default: all 0.3s ease;
+
+@mixin responsive-input($padding, $font-size) {
+  padding: $padding;
+  font-size: $font-size;
+}
+
 .search-wrapper {
   display: flex;
   justify-content: center;
   padding: 20px;
-}
 
-input[type="text"] {
-  max-width: 600px;
-  padding: 16px 24px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 18px;
-  transition: all 0.3s ease;
-  outline: none;
-}
+  input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-default;
+    font-size: $font-size-default;
+    transition: $transition-default;
+    outline: none;
+    padding: $padding-default;
 
-input[type="text"]:focus {
-  border-color: #aaa;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    &:focus {
+      border-color: #aaa;
+      box-shadow: $box-shadow-focus;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    input[type="text"] {
+      @include responsive-input(12px 18px, 16px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    input[type="text"] {
+      @include responsive-input(10px 15px, 14px);
+    }
+  }
 }

@@ -47,13 +47,15 @@
 
 @media (max-width: 768px) {
   .avatar {
-    height: 40px;
-    width: 40px;
     font-size: 20px;
   }
   .card-flex {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .card-body {
+    min-height: 220px;
   }
 }
 
