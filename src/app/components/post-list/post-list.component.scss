@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .post-list {
   display: flex;
   flex-direction: column; /* Default list view */
@@ -22,7 +24,7 @@
   button {
     padding: 8px 16px;
     margin: 0 10px;
-    background-color: #757575;
+    background-color: $main-button-color;
     color: white;
     border: none;
     border-radius: 20px;
