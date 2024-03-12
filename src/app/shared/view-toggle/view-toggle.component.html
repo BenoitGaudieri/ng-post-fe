@@ -1,5 +1,4 @@
 <div class="view-toggle" (click)="toggleView()">
-  <!-- Grid Icon, shown when in list view -->
   <svg
     *ngIf="!isGridView"
     xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +12,6 @@
       d="M1 2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm9 0a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V2zm-9 9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-4zm9 0a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-4z"
     />
   </svg>
-  <!-- List Icon, shown when in grid view -->
   <svg
     *ngIf="isGridView"
     xmlns="http://www.w3.org/2000/svg"
