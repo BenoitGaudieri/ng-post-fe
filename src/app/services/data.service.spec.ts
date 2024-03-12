@@ -20,7 +20,7 @@ describe('DataService', () => {
   });
 
   afterEach(() => {
-    httpMock.verify(); // Ensure that there are no outstanding requests
+    httpMock.verify();
   });
 
   it('should retrieve posts from the API via GET', () => {
