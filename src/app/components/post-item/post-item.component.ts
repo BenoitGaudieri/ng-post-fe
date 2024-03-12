@@ -38,6 +38,7 @@ export class PostItemComponent {
   getInitials(name: string) {
     let initials = name
       .split(' ')
+      .slice(0, 2)
       .map((word) => word.charAt(0))
       .join('');
     return initials.toUpperCase();
