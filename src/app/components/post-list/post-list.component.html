@@ -4,7 +4,7 @@
   </ng-container>
   <p *ngIf="posts.length === 0">No posts found.</p>
 </div>
-<div class="pagination-controls">
+<div class="pagination-controls" *ngIf="posts.length > 0">
   <button (click)="previousPage()" [disabled]="currentPage === 1">
     Previous
   </button>
